@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            font-size: 20px;
+        }
+        label{
+            font-weight: bold;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <form id="data">
+        <div class="main">
+            <label>FULL STACK</label>
+            <input type="checkbox" onclick="myParent(this)" id="FULL STACK" />
+            <div class="first">
+                <label>FRONT END </label>
+                <input type="checkbox" id="first" onclick="myParent(this)" />
+
+                <div>
+                    <label>Css</label>
+                    <input type="checkbox" />
+                </div>
+                <div>
+                    <label>HTML</label>
+                    <input type="checkbox" />
+                </div>
+                <div>
+                    <label>Javascript</label>
+                    <input type="checkbox" />
+                </div>
+                <div>
+                    <label>Bootstrap</label>
+                    <input type="checkbox" />
+                </div>
+
+
+            </div>
+
+            <div class="secound">
+                <label>BACKEND</label>
+                <input type="checkbox" id="secund" onclick="myParent(this)" />
+
+                <div>
+                    <label>Php</label>
+                    <input type="checkbox" class="secund2" onclick="myParent(this)" />
+                </div>
+                <div>
+                    <label>.net</label>
+                    <input type="checkbox" />
+                </div>
+                <div>
+                    <label>Python</label>
+                    <input type="checkbox"  />
+                </div>
+                <div>
+                    <label>Java</label>
+                    <input type="checkbox" id="myBtn" />
+                </div>
+
+            </div>
+        </div>
+    </form>
+</body>
+<script>
+        let allBox = document.querySelectorAll("input[type='checkbox']");
+    
+    function myParent(element) {
+        let d = element.parentElement.querySelectorAll("input[type='checkbox']");
+        for (let i = 0; i < d.length; i++) {
+            if (element.checked == true) {
+                d[i].checked = true;
+            }
+            else {
+                d[i].checked = false;
+            }   
+        }    
+        for(let i=0;i<d.length;i++){
+            d[i].addEventListener('click',function(){
+                if(d[i].checked == false)
+                {
+                    d[i].checked == false;
+                }
+                
+            })
+        }
+
+    }
+
+
+            
+    
+</script>
+
+</html>
